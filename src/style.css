@@ -48,6 +48,10 @@ li {
   line-height: 1;
 }
 
+li:first-letter {
+  text-transform: capitalize;
+}
+
 .main-icon {
   font-size: 91px;
   color: #f3d516;
