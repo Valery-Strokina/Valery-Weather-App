@@ -1,6 +1,7 @@
 let currentDayTime = new Date();
 
-function formatDate(date) {
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
   let currentHour = date.getHours();
   if (currentHour < 10) {
     currentHour = `0${currentHour}`;
@@ -29,7 +30,6 @@ let now = document.querySelector("#now");
 now.innerHTML = formatDate(currentDayTime);
 
 function displayWeatherCondition(response) {
-  console.log(response.data);
   document.querySelector("#city").innerHTML =
     response.data.name + ", " + response.data.sys.country;
   document.querySelector("#temperature").innerHTML = Math.round(
