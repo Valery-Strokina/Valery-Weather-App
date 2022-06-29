@@ -50,6 +50,28 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
+
+  function showFahrenheit(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML = Math.round(
+      Math.round(response.data.main.temp) * 1.8 + 32
+    );
+    celsiusClick.classList.remove("active");
+    fahrenheitClick.classList.add("active");
+  }
+  let fahrenheitClick = document.querySelector("#fahrenheit");
+  fahrenheitClick.addEventListener("click", showFahrenheit);
+
+  function showCelsius(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML = Math.round(response.data.main.temp);
+    celsiusClick.classList.add("active");
+    fahrenheitClick.classList.remove("active");
+  }
+  let celsiusClick = document.querySelector("#celsius");
+  celsiusClick.addEventListener("click", showCelsius);
 }
 
 function searchCity(city) {
@@ -67,22 +89,6 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-function showFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 44;
-}
-let fahrenheitClick = document.querySelector("#fahrenheit");
-fahrenheitClick.addEventListener("click", showFahrenheit);
-
-function showCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 20;
-}
-let celsiusClick = document.querySelector("#celsius");
-celsiusClick.addEventListener("click", showCelsius);
 
 function searchLocation(position) {
   let apiKey = "62bc298785543e137bc6756e514eb1c3";

@@ -33,7 +33,7 @@ li {
 }
 
 .weather-app {
-  border: 1px solid black;
+  border: 1px solid #48484a;
   padding: 15px;
   margin: 20px auto;
   max-width: 600px;
@@ -92,7 +92,7 @@ li:first-letter {
   margin: 0 10px 0 10px;
   font-size: 19px;
   background: #75cac3;
-  border-color: black;
+  border-color: #48484a;
 }
 
 .sun {
@@ -102,7 +102,7 @@ li:first-letter {
   margin: 0 10px 0 10px;
   font-size: 19px;
   background: #75cac3;
-  border-color: black;
+  border-color: #48484a;
 }
 
 .mon {
@@ -112,7 +112,7 @@ li:first-letter {
   margin: 0 10px 0 10px;
   font-size: 19px;
   background: #75cac3;
-  border-color: black;
+  border-color: #48484a;
 }
 
 .tue {
@@ -122,7 +122,7 @@ li:first-letter {
   margin: 0 10px 0 10px;
   font-size: 19px;
   background: #75cac3;
-  border-color: black;
+  border-color: #48484a;
 }
 
 .wed {
@@ -132,11 +132,11 @@ li:first-letter {
   margin: 0 0 0 10px;
   font-size: 19px;
   background: #75cac3;
-  border-color: black;
+  border-color: #48484a;
 }
 
 .week {
-  color: black;
+  color: #48484a;
 }
 
 footer {
@@ -195,22 +195,22 @@ footer {
   background-color: #f8f9fa;
 }
 
-#celsius {
+.active {
   text-decoration: none;
   color: white;
 }
 
-#celsius:hover {
-  text-decoration: underline;
+.active:hover {
+  text-decoration: none;
   color: #0067ff;
+}
+
+#celsius {
+  text-decoration: none;
+  cursor: default;
 }
 
 #fahrenheit {
   text-decoration: none;
-  color: white;
-}
-
-#fahrenheit:hover {
-  text-decoration: underline;
-  color: #0067ff;
+  cursor: default;
 }
