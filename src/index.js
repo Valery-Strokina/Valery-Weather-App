@@ -30,6 +30,10 @@ let now = document.querySelector("#now");
 now.innerHTML = formatDate(currentDayTime);
 
 function displayWeatherCondition(response) {
+  console.log(response.data);
+  let iconElement = document.querySelector("#icon");
+  iconElement.innerHTML = `http://openweathermap.org/img/wn/10d@2x.png`;
+
   document.querySelector("#city").innerHTML =
     response.data.name + ", " + response.data.sys.country;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -80,7 +84,6 @@ function searchLocation(position) {
   let apiKey = "62bc298785543e137bc6756e514eb1c3";
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=${units}`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
