@@ -1,0 +1,4 @@
+Check structure of js
+Update style 
+Fix columns
+Update style for phone
