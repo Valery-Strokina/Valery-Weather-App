@@ -57,28 +57,6 @@ function displayWeatherCondition(response) {
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
 
-  function showFahrenheit(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = Math.round(
-      Math.round(response.data.main.temp) * 1.8 + 32
-    );
-    celsiusClick.classList.remove("active");
-    fahrenheitClick.classList.add("active");
-  }
-  let fahrenheitClick = document.querySelector("#fahrenheit");
-  fahrenheitClick.addEventListener("click", showFahrenheit);
-
-  function showCelsius(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = Math.round(response.data.main.temp);
-    celsiusClick.classList.add("active");
-    fahrenheitClick.classList.remove("active");
-  }
-  let celsiusClick = document.querySelector("#celsius");
-  celsiusClick.addEventListener("click", showCelsius);
-
   getForecast(response.data.coord);
 }
 

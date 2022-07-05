@@ -166,23 +166,3 @@ footer {
 .form-control:hover {
   background-color: #f8f9fa;
 }
-
-.active {
-  text-decoration: none;
-  color: white;
-}
-
-.active:hover {
-  text-decoration: none;
-  color: #0067ff;
-}
-
-#celsius {
-  text-decoration: none;
-  cursor: default;
-}
-
-#fahrenheit {
-  text-decoration: none;
-  cursor: default;
-}
