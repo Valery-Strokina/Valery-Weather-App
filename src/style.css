@@ -6,10 +6,7 @@ body {
 h1 {
   color: #ffff;
   font-size: 24px;
-  font-weight: 100;
   line-height: 28px;
-  margin: 0;
-  margin-bottom: 0;
 }
 
 ul {
@@ -28,8 +25,15 @@ li {
   padding: 0;
 }
 
-.overview {
-  margin: 0 0 20px 20px;
+li:first-letter {
+  text-transform: capitalize;
+}
+
+footer {
+  text-align: center;
+  font-size: smaller;
+  margin: 20px 0 -7px 0;
+  color: black;
 }
 
 .weather-app {
@@ -41,22 +45,40 @@ li {
   background: #357376;
 }
 
+.type {
+  width: 60%;
+}
+
+.search {
+  width: 20%;
+  margin: 0 -20px 0 12px;
+}
+
+.current {
+  width: 20%;
+  margin: 0 0 0 5px;
+}
+
+.form-control {
+  background-color: #dee2e6;
+}
+
+.form-control:focus {
+  background-color: #dee2e6;
+}
+
+.form-control:hover {
+  background-color: #f8f9fa;
+}
+
+.overview {
+  margin: 0 0 20px 20px;
+}
+
 .temperature {
   color: #ffff;
   font-size: 64px;
-  font-weight: 400;
   line-height: 1;
-}
-
-li:first-letter {
-  text-transform: capitalize;
-}
-
-.weather-icon {
-  font-size: 30px;
-  color: #ffff;
-  margin-right: 10px;
-  margin: 0 0 0 0;
 }
 
 .units {
@@ -64,10 +86,6 @@ li:first-letter {
   top: -34px;
   color: #ffff;
   font-size: 16px;
-}
-
-.search-form {
-  margin-bottom: 20px;
 }
 
 .main {
@@ -95,20 +113,13 @@ li:first-letter {
   margin-bottom: 5px;
 }
 
-.sat {
+.forecast-column {
   border: solid 1px;
   border-radius: 10px;
   margin: 0 10px 0 9px;
   font-size: 19px;
   background: #6ba8a9;
   border-color: transparent;
-}
-
-footer {
-  text-align: center;
-  font-size: smaller;
-  margin: 20px 0 -7px 0;
-  color: black;
 }
 
 .code {
@@ -119,53 +130,4 @@ footer {
 .code:hover {
   color: black;
   text-decoration: none;
-}
-
-.type {
-  width: 60%;
-}
-
-.search {
-  width: 20%;
-  margin: 0 -20px 0 12px;
-}
-
-.current {
-  width: 20%;
-  margin: 0 0 0 5px;
-}
-
-.btn-bd-primary {
-  --bs-btn-font-weight: 600;
-  --bs-btn-color: var(--bs-white);
-  --bs-btn-bg: var(--bd-violet);
-  --bs-btn-border-color: var(--bd-violet);
-  --bs-btn-border-radius: 0.5rem;
-  --bs-btn-hover-color: var(--bs-white);
-  --bs-btn-hover-bg: #{shade-color($bd-violet, 10%)};
-  --bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
-  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-  --bs-btn-active-color: var(--bs-btn-hover-color);
-  --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
-  --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
-}
-
-.btn {
-  --bs-btn-bg: #dee2e6;
-}
-
-.btn:hover {
-  background-color: var(--bs-gray-100);
-}
-
-.form-control {
-  background-color: #dee2e6;
-}
-
-.form-control:focus {
-  background-color: #dee2e6;
-}
-
-.form-control:hover {
-  background-color: #f8f9fa;
 }

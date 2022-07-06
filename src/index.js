@@ -109,7 +109,7 @@ function displayForecast(response) {
     if (index < 6 && index > 0) {
       forecastHTML =
         forecastHTML +
-        `<div class="col-2 sat">
+        `<div class="col-2 forecast-column">
               <div class="weather-forecast-date">${formatDay(
                 forecastDay.dt
               )}</div>
