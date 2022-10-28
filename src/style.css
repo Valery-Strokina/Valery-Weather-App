@@ -116,7 +116,7 @@ footer {
 .forecast-column {
   border: solid 1px;
   border-radius: 10px;
-  margin: 0 10px 0 9px;
+  margin: 0 9px 0 9px;
   font-size: 19px;
   background: #6ba8a9;
   border-color: transparent;
@@ -130,4 +130,80 @@ footer {
 .code:hover {
   color: black;
   text-decoration: none;
+}
+
+@media (max-width: 770px) {
+  .main {
+    margin: 35px 40px 35px 0px;
+  }
+  .forecast-column {
+    margin: 0 8px 0 8px;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  li {
+    font-size: 13px;
+  }
+
+  footer {
+    font-size: 10px;
+  }
+
+  .search {
+    width: 28%;
+    margin: 0px 0px 0px -7px;
+  }
+  .current {
+    width: 28%;
+    margin: 0px -11px 0 -18px;
+  }
+
+  .type {
+    width: 56%;
+  }
+
+  #icon {
+    height: 55px;
+  }
+
+  .current input {
+    font-size: 10px;
+  }
+
+  .search input {
+    font-size: 10px;
+  }
+
+  .type input {
+    font-size: 10px;
+  }
+
+  .temperature {
+    font-size: 50px;
+  }
+
+  .units {
+    font-size: 13px;
+  }
+
+  .weather-forecast {
+    margin: -30px 0 0 0;
+  }
+
+  .weather-forecast-date {
+    font-size: 13px;
+  }
+
+  .weather-forecast-temperatures {
+    font-size: 12px;
+  }
+
+  .forecast-column {
+    margin: 0 7px 0 7px;
+  }
 }
