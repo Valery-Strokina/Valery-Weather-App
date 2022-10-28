@@ -1,2 +1,0 @@
-Check structure of js
-Update style for phone
